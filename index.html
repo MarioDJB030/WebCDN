@@ -1,39 +1,210 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Web</title>
+    <title>Beautiful Gallery Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: #2a2a72;
+            background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            background: white;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .gallery-item .content {
+            padding: 1rem;
+        }
+        
+        .gallery-item h3 {
+            margin-bottom: 0.5rem;
+            color: #2a2a72;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #009ffd;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-top: 0.5rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #0084d6;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Bienvenidos a mi página web</h1>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+        <h1>Beautiful Image Gallery</h1>
+        <p>A collection of stunning images from around the world</p>
     </header>
-
-    <section id="inicio">
-        <h2>Bienvenida</h2>
-        <p>Esta es una página web básica creada con HTML.</p>
-    </section>
-
-    <section id="sobre-mi">
-        <h2>Sobre mí</h2>
-        <p>Aquí puedes escribir algo acerca de ti o de tu proyecto.</p>
-    </section>
-
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>Para contactarme, puedes enviarme un mensaje a <a href="mailto:ejemplo@correo.com">ejemplo@correo.com</a>.</p>
-    </section>
-
+    
+    <div class="container">
+        <div class="intro">
+            <h2>Welcome to our Gallery</h2>
+            <p>Explore this curated collection of beautiful images. Each image tells a unique story.</p>
+        </div>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Mountain landscape">
+                <div class="content">
+                    <h3>Mountain Majesty</h3>
+                    <p>Breathtaking mountain views with crystal clear waters reflecting the sky.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Sunset over the ocean">
+                <div class="content">
+                    <h3>Golden Sunset</h3>
+                    <p>The sun setting over the calm ocean, painting the sky with golden hues.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e" alt="Forest landscape">
+                <div class="content">
+                    <h3>Enchanted Forest</h3>
+                    <p>A mystical forest path surrounded by tall trees and morning mist.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07" alt="Desert landscape">
+                <div class="content">
+                    <h3>Desert Wonders</h3>
+                    <p>The vast, beautiful desert landscape with its unique formations.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e" alt="Countryside">
+                <div class="content">
+                    <h3>Peaceful Countryside</h3>
+                    <p>Rolling hills and green meadows of the serene countryside.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1494500764479-0c8f2919a3d8" alt="Starry night">
+                <div class="content">
+                    <h3>Starry Night</h3>
+                    <p>A magnificent view of the night sky filled with countless stars.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <footer>
-        <p>&copy; 2025 Mi Página Web. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Beautiful Gallery. All images are from Unsplash.</p>
     </footer>
+    
+    <script>
+        // Simple JavaScript to make the page more interactive
+        document.addEventListener('DOMContentLoaded', function() {
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    this.style.transform = 'scale(1.02)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 200);
+                });
+            });
+            
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    alert('Feature coming soon!');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
